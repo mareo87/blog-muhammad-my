@@ -7,7 +7,7 @@ export const getGlobalData = () => {
     : 'Muhammad.my Blog';
   const footerText = process.env.BLOG_FOOTER_TEXT
     ? decodeURI(process.env.BLOG_FOOTER_TEXT)
-    : 'All%20rights%20reserved.%20Made%20in%20%F0%9F%87%B2%F0%9F%87%BE.';
+    : 'All rights reserved. Made in 🇲🇾.';
 
   return {
     name,
