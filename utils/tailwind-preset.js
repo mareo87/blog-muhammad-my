@@ -2,9 +2,9 @@ const plugin = require('tailwindcss/plugin');
 const pluginTypography = require('@tailwindcss/typography');
 const { COLOR_THEMES, FONT_THEMES } = require('../themes');
 
-const THEME = process.env.BLOG_THEME || 'bejamas';
+const BLOG_THEME = process.env.BLOG_THEME || 'antigravity';
 const FONT_PRIMARY = process.env.BLOG_FONT_HEADINGS || 'sans-serif';
-const FONT_SECONDARY = process.env.BLOG_FONT_BODY || 'monospace';
+const FONT_SECONDARY = process.env.BLOG_FONT_BODY || 'sans-serif';
 
 const hoveredSiblingPlugin = plugin(function ({ addVariant, e }) {
   addVariant('hovered-sibling', ({ container }) => {
@@ -17,8 +17,8 @@ const hoveredSiblingPlugin = plugin(function ({ addVariant, e }) {
 const themesConfig = plugin(function ({ addComponents }) {
   const cssVars = {};
 
-  Object.keys(COLOR_THEMES[THEME].colors).forEach((key) => {
-    cssVars[`--color-${key}`] = `${COLOR_THEMES[THEME].colors[key]}`;
+  Object.keys(COLOR_THEMES[BLOG_THEME].colors).forEach((key) => {
+    cssVars[`--color-${key}`] = `${COLOR_THEMES[BLOG_THEME].colors[key]}`;
   });
 
   cssVars['--font-primary'] = FONT_THEMES[FONT_PRIMARY];
@@ -50,13 +50,13 @@ module.exports = {
         secondary: 'var(--font-secondary)',
       },
       theme: {
-        bejamas: {
+        antigravity: {
           colors: {
-            primary: '#FF8585',
-            'gradient-1': '#7d7aff',
-            'gradient-2': '#2121E2',
-            'gradient-3': '#FF76B8',
-            'gradient-4': '#001AFF',
+            primary: '#8b5cf6',
+            'gradient-1': '#3b82f6',
+            'gradient-2': '#8b5cf6',
+            'gradient-3': '#06b6d4',
+            'gradient-4': '#0b0f19',
           },
         },
       },

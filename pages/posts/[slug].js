@@ -40,6 +40,7 @@ export default function PostPage({
       <SEO
         title={`${frontMatter.title} - ${globalData.name}`}
         description={frontMatter.description}
+        type="article"
       />
       <Header name={globalData.name} />
       <article className="px-6 md:px-0">
@@ -58,29 +59,31 @@ export default function PostPage({
         </main>
         <div className="grid md:grid-cols-2 lg:-mx-24 mt-12">
           {prevPost && (
-            <Link href={`/posts/${prevPost.slug}`}>
-              <a className="py-8 px-10 text-center md:text-right first:rounded-t-lg md:first:rounded-tr-none md:first:rounded-l-lg last:rounded-r-lg first last:rounded-b-lg backdrop-blur-lg bg-white dark:bg-black dark:bg-opacity-30 bg-opacity-10 hover:bg-opacity-20 dark:hover:bg-opacity-50 transition border border-gray-800 dark:border-white border-opacity-10 dark:border-opacity-10 last:border-t md:border-r-0 md:last:border-r md:last:rounded-r-none flex flex-col">
-                <p className="uppercase text-gray-500 mb-4 dark:text-white dark:opacity-60">
-                  Previous
-                </p>
-                <h4 className="text-2xl text-gray-700 mb-6 dark:text-white">
-                  {prevPost.title}
-                </h4>
-                <ArrowIcon className="transform rotate-180 mx-auto md:mr-0 mt-auto" />
-              </a>
+            <Link
+              href={`/posts/${prevPost.slug}`}
+              className="py-8 px-10 text-center md:text-right first:rounded-t-2xl md:first:rounded-tr-none md:first:rounded-l-2xl last:rounded-r-2xl first last:rounded-b-2xl backdrop-blur-xl bg-white/5 dark:bg-white/5 hover:bg-white/10 dark:hover:bg-white/10 transition-all duration-300 border border-white/10 hover:border-white/20 last:border-t md:border-r-0 md:last:border-r md:last:rounded-r-none flex flex-col group hover:shadow-2xl hover:shadow-primary/20"
+            >
+              <p className="uppercase text-gray-500 mb-4 dark:text-white dark:opacity-60">
+                Previous
+              </p>
+              <h4 className="text-2xl text-gray-700 mb-6 dark:text-white group-hover:text-primary transition-colors duration-300">
+                {prevPost.title}
+              </h4>
+              <ArrowIcon className="transform rotate-180 mx-auto md:mr-0 mt-auto group-hover:text-primary transition-colors duration-300" />
             </Link>
           )}
           {nextPost && (
-            <Link href={`/posts/${nextPost.slug}`}>
-              <a className="py-8 px-10 text-center md:text-left md:first:rounded-t-lg last:rounded-b-lg first:rounded-l-lg md:last:rounded-bl-none md:last:rounded-r-lg backdrop-blur-lg bg-white dark:bg-black dark:bg-opacity-30 bg-opacity-10 hover:bg-opacity-20 dark:hover:bg-opacity-50 transition border border-gray-800 dark:border-white border-opacity-10 dark:border-opacity-10 border-t-0 first:border-t first:rounded-t-lg md:border-t border-b-0 last:border-b flex flex-col">
-                <p className="uppercase text-gray-500 mb-4 dark:text-white dark:opacity-60">
-                  Next
-                </p>
-                <h4 className="text-2xl text-gray-700 mb-6 dark:text-white">
-                  {nextPost.title}
-                </h4>
-                <ArrowIcon className="mt-auto mx-auto md:ml-0" />
-              </a>
+            <Link
+              href={`/posts/${nextPost.slug}`}
+              className="py-8 px-10 text-center md:text-left md:first:rounded-t-2xl last:rounded-b-2xl first:rounded-l-2xl md:last:rounded-bl-none md:last:rounded-r-2xl backdrop-blur-xl bg-white/5 dark:bg-white/5 hover:bg-white/10 dark:hover:bg-white/10 transition-all duration-300 border border-white/10 hover:border-white/20 border-t-0 first:border-t first:rounded-t-2xl md:border-t border-b-0 last:border-b flex flex-col group hover:shadow-2xl hover:shadow-primary/20"
+            >
+              <p className="uppercase text-gray-500 mb-4 dark:text-white dark:opacity-60">
+                Next
+              </p>
+              <h4 className="text-2xl text-gray-700 mb-6 dark:text-white group-hover:text-primary transition-colors duration-300">
+                {nextPost.title}
+              </h4>
+              <ArrowIcon className="mt-auto mx-auto md:ml-0 group-hover:text-primary transition-colors duration-300" />
             </Link>
           )}
         </div>

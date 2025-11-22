@@ -1,14 +1,18 @@
-import Link from 'next/link';
-
 export default function Header({ name }) {
   return (
     <header className="pt-20 pb-12">
-      <div className="w-12 h-12 rounded-full block mx-auto mb-4 bg-gradient-conic from-gradient-3 to-gradient-4" />
-      <p className="text-2xl dark:text-white text-center">
-        <Link href="/">
-          <a>{name}</a>
-        </Link>
-      </p>
+      <a
+        href="https://muhammad.my"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="block mx-auto w-32 mb-4 hover:opacity-80 transition-opacity"
+      >
+        <img
+          src="/muhammad-logo.png"
+          alt="Muhammad"
+          className="w-full h-auto"
+        />
+      </a>
     </header>
   );
 }
