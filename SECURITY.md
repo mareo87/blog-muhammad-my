@@ -1,3 +1,4 @@
+<!-- SPDX-License-Identifier: MIT -->
 # Security Policy
 
 ## Reporting a Vulnerability

@@ -1,0 +1,39 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0b0f19;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#1e1b4b;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0b0f19;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#8b5cf6;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#3b82f6;stop-opacity:1" />
+    </linearGradient>
+    <filter id="glass" x="0" y="0" width="100%" height="100%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="10" />
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#grad)" />
+
+  <!-- Abstract Shapes -->
+  <circle cx="100" cy="100" r="300" fill="url(#accent)" opacity="0.1" filter="url(#glass)" />
+  <circle cx="1100" cy="530" r="200" fill="url(#accent)" opacity="0.1" filter="url(#glass)" />
+
+  <!-- Glass Card -->
+  <rect x="200" y="165" width="800" height="300" rx="20" ry="20" fill="white" fill-opacity="0.05" stroke="white" stroke-opacity="0.1" stroke-width="1" />
+
+  <!-- Text -->
+  <text x="600" y="300" font-family="system-ui, -apple-system, sans-serif" font-size="72" font-weight="bold" fill="white" text-anchor="middle" dominant-baseline="middle">
+    Muhammad.my Blog
+  </text>
+  
+  <text x="600" y="380" font-family="system-ui, -apple-system, sans-serif" font-size="32" fill="#94a3b8" text-anchor="middle" dominant-baseline="middle" letter-spacing="2">
+    BUILT WITH ANTIGRAVITY
+  </text>
+
+  <!-- Logo/Brand Accent -->
+  <rect x="550" y="430" width="100" height="4" fill="url(#accent)" rx="2" />
+
+</svg>

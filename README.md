@@ -1,93 +1,105 @@
+<!-- SPDX-License-Identifier: MIT -->
 # Muhammad.my Blog
 
-A premium Next.js blog with a stunning **Antigravity** design theme featuring blue and purple gradients, glassmorphism effects, and modern interactions.
+[![Build Status](https://img.shields.io/github/actions/workflow/status/mare.../ci.yml?branch=main&label=build&logo=github)](https://github.com/mare.../actions)
+[![License](https://img.shields.io/github/license/mare.../blog-muhammad-my?color=blue)](LICENSE)
+[![Dependabot](https://img.shields.io/badge/Dependabot-enabled-success?logo=dependabot)](https://github.com/mare.../blog-muhammad-my/network/updates)
+[![npm version](https://img.shields.io/npm/v/@vercel/analytics?color=red&logo=npm)](https://www.npmjs.com/package/@vercel/analytics)
+[![Vercel Deploy](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/mare.../blog-muhammad-my)
 
-![Next.js](https://img.shields.io/badge/Next.js-16.0-black?logo=next.js)
-![React](https://img.shields.io/badge/React-19.2-blue?logo=react)
-![Tailwind CSS](https://img.shields.io/badge/Tailwind-3.0-38bdf8?logo=tailwind-css)
+---
+
+## 📖 Table of Contents
+- [✨ Features](#-features)
+- [🚀 Quick Start](#-quick-start)
+- [🛠️ Customization](#-customization)
+- [📦 Deployment](#-deployment)
+- [🔒 Security](#-security)
+- [🧩 Built With](#-built-with)
+- [📄 License](#-license)
+- [🙏 Acknowledgments](#-acknowledgments)
+
+---
 
 ## ✨ Features
 
-- 🎨 **Antigravity Theme** - Deep blue/purple gradient design with glassmorphism
-- 🔍 **Real-time Search** - Instant post filtering
-- 🏷️ **Tag System** - Clickable tags for easy content discovery
-- 🌙 **Dark Mode Default** - Beautiful dark theme out of the box
-- 📱 **Fully Responsive** - Looks great on all devices
-- ⚡ **Fast Performance** - Built with Next.js 16 and React 19
-- 🔒 **Security Hardened** - Production-ready with security headers
+- 🎨 **Antigravity Theme** – Deep blue/purple gradient with glassmorphism.
+- 🔍 **Real‑time Search** – Instant post filtering.
+- 🏷️ **Tag System** – Clickable tags for easy discovery.
+- 🌙 **Dark Mode Default** – Beautiful dark theme out of the box.
+- 📱 **Fully Responsive** – Looks great on all devices.
+- ⚡ **Fast Performance** – Built with Next.js 16 and React 19.
+- 🔒 **Security Hardened** – Production‑ready with security headers.
+
+---
 
 ## 🚀 Quick Start
 
 ### Prerequisites
 
-- Node.js 18+ 
+- Node.js 18+ (recommended)
 - npm or yarn
 
 ### Installation
 
 ```bash
 # Clone the repository
-git clone https://github.com/muham/blog-muhammad-my.git
+git clone https://github.com/mare.../blog-muhammad-my.git
 cd blog-muhammad-my
 
 # Install dependencies
 npm install
 
-# Run development server
+# Run the development server
 npm run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) in your browser.
+Open <http://localhost:3000> in your browser.
 
-## 📝 Adding New Posts
-
-Create a new `.mdx` file in the `/posts` directory:
-
-```mdx
----
-title: Your Post Title
-description: "A brief description of your post"
-date: Nov 22 2025
-tags: [Tech, Tutorial]
 ---
 
-Your content here...
-```
-
-## 🎨 Customization
+## 🛠️ Customization
 
 ### Theme Colors
 
-Edit `themes.js` to customize the color palette:
+Edit `themes.js` to adjust the palette:
 
-```javascript
+```js
 antigravity: {
   colors: {
     primary: '#8b5cf6',      // Purple
     'gradient-1': '#3b82f6', // Blue
-    // ... more colors
+    // …more colors
   },
-}
+},
 ```
 
 ### Global Settings
 
-Configure in `utils/global-data.js` or use environment variables:
+Configure via `utils/global-data.js` or environment variables:
 
-- `BLOG_NAME` - Your name
-- `BLOG_TITLE` - Blog title
-- `BLOG_FOOTER_TEXT` - Footer text
-- `BLOG_THEME` - Theme name (default: 'antigravity')
+- `BLOG_NAME` – Your name
+- `BLOG_TITLE` – Blog title
+- `BLOG_FOOTER_TEXT` – Footer text
+- `BLOG_THEME` – Theme name (default: `antigravity`)
 
-## 🚢 Deployment
+---
 
-### Deploy to Vercel
+## 📦 Deployment
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/muham/blog-muhammad-my)
+### Deploy to Vercel (recommended)
+
+Click the button above or run:
+
+```bash
+vercel
+```
 
 ### Deploy to Netlify
 
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/muham/blog-muhammad-my)
+```bash
+netlify deploy --prod
+```
 
 ### Manual Deployment
 
@@ -97,38 +109,40 @@ npm run build
 
 # Start production server
 npm start
-
-# Or export as static site
-npm run export
 ```
+
+---
 
 ## 🔒 Security
 
-This project follows security best practices:
+- ✅ No sensitive data in the codebase.
+- ✅ Security headers are configured in `next.config.js`.
+- ✅ Regular dependency updates via Dependabot.
 
-- ✅ No sensitive data in code
-- ✅ Security headers enabled
-- ✅ Safe MDX rendering
-- ✅ Regular dependency updates
+See [SECURITY.md](SECURITY.md) for the full security policy.
 
-See [SECURITY.md](SECURITY.md) for our security policy.
+---
 
-## 📦 Built With
+## 🧩 Built With
 
-- [Next.js](https://nextjs.org/) - React framework
-- [Tailwind CSS](https://tailwindcss.com/) - Utility-first CSS
-- [MDX](https://mdxjs.com/) - Markdown for components
-- [Prism](https://prismjs.com/) - Syntax highlighting
+- **[Next.js](https://nextjs.org/)** – React framework
+- **[Tailwind CSS](https://tailwindcss.com/)** – Utility‑first CSS
+- **[MDX](https://mdxjs.com/)** – Markdown with JSX
+- **[Prism](https://prismjs.com/)** – Syntax highlighting
+
+---
 
 ## 📄 License
 
 This project is open source and available under the [MIT License](LICENSE).
 
+---
+
 ## 🙏 Acknowledgments
 
-- Original template by [Bejamas](https://bejamas.io/) and [Netlify](https://www.netlify.com/)
-- **Antigravity Theme** inspired by and built with [Google Antigravity](https://antigravity.google)
-- Theme design credits to [Antigravity](https://antigravity.google)
+- Original template by [Bejamas](https://bejamas.io/) and [Netlify](https://www.netlify.com/).
+- **Antigravity Theme** inspired by and built with [Google Antigravity](https://antigravity.google).
+- Design credits to [Antigravity](https://antigravity.google).
 
 ---
 
