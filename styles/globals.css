@@ -12,6 +12,41 @@ h6 {
   font-family: var(--font-primary);
 }
 
+/* Custom styles for rehype-pretty-code */
+figure[data-rehype-pretty-code-figure] {
+  margin-bottom: 1.5rem;
+}
+
+figure[data-rehype-pretty-code-figure] pre {
+  padding: 1.5rem;
+  border-radius: 0.75rem;
+  background-color: #0d1117 !important; /* GitHub Dark background */
+  overflow-x: auto;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+figure[data-rehype-pretty-code-figure] code {
+  background-color: transparent !important;
+  color: inherit !important;
+  font-size: 0.9rem;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
+
+/* Line numbers style if enabled */
+figure[data-rehype-pretty-code-figure] code > [data-line]::before {
+  color: #6e7681;
+  content: counter(line);
+  counter-increment: line;
+  display: inline-block;
+  width: 1rem;
+  margin-right: 1.5rem;
+  text-align: right;
+}
+
+figure[data-rehype-pretty-code-figure] {
+  counter-reset: line;
+}
+
 body {
   font-family: var(--font-secondary);
   background-color: #0b0f19;
