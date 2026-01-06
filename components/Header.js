@@ -6,10 +6,11 @@ export default function Header({ name }) {
         target="_blank"
         rel="noopener noreferrer"
         className="block mx-auto w-32 mb-4 hover:opacity-80 transition-opacity"
+        aria-label="Visit Muhammad's personal website (opens in a new tab)"
       >
         <img
           src="/muhammad-logo.png"
-          alt="Muhammad"
+          alt="Muhammad's personal logo"
           className="w-full h-auto"
         />
       </a>
