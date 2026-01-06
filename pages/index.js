@@ -58,16 +58,7 @@ export default function Index({ posts, globalData }) {
       />
       <Header name={globalData.name} />
       <main className="w-full">
-        <h1 className="text-3xl lg:text-5xl text-center mb-12">
-          <a
-            href="https://muhammad.my"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hover:text-primary transition-colors"
-          >
-            Muhammad.my
-          </a>
-        </h1>
+        <h1 className="text-3xl lg:text-5xl text-center mb-12">Muhammad.my</h1>
         <Search onSearch={handleSearch} />
         <ul className="w-full">
           {filteredPosts.map((post) => (
@@ -75,34 +66,34 @@ export default function Index({ posts, globalData }) {
               key={post.filePath}
               className="md:first:rounded-t-2xl md:last:rounded-b-2xl backdrop-blur-xl bg-white/5 dark:bg-white/5 hover:bg-white/10 dark:hover:bg-white/10 transition-all duration-300 border border-white/10 hover:border-white/20 border-b-0 last:border-b hover:shadow-2xl hover:shadow-primary/20 group"
             >
-              <Link
-                as={`/posts/${post.filePath.replace(/\.mdx?$/, '')}`}
-                href={`/posts/[slug]`}
-                className="py-6 lg:py-10 px-6 lg:px-16 block focus:outline-none focus:ring-4"
-              >
-                {post.data.date && (
-                  <p className="uppercase mb-3 font-bold opacity-60">
-                    {post.data.date}
-                  </p>
-                )}
-                <h2 className="text-2xl md:text-3xl">{post.data.title}</h2>
-                {post.data.description && (
-                  <p className="mt-3 text-lg opacity-60">
-                    {post.data.description}
-                  </p>
-                )}
+              <div className="py-6 lg:py-10 px-6 lg:px-16 block focus:outline-none focus:ring-4">
+                <Link
+                  as={`/posts/${post.filePath.replace(/\.mdx?$/, '')}`}
+                  href={`/posts/[slug]`}
+                  className="focus:outline-none"
+                >
+                  {post.data.date && (
+                    <p className="uppercase mb-3 font-bold opacity-60">
+                      {post.data.date}
+                    </p>
+                  )}
+                  <h2 className="text-2xl md:text-3xl">{post.data.title}</h2>
+                  {post.data.description && (
+                    <p className="mt-3 text-lg opacity-60">
+                      {post.data.description}
+                    </p>
+                  )}
+                  <ArrowIcon className="mt-4 group-hover:text-primary transition-colors duration-300" />
+                </Link>
                 {post.data.tags && (
                   <div className="flex flex-wrap gap-2 mt-4">
                     {post.data.tags.map((tag) => (
                       <button
                         key={tag}
-                        onClick={(e) => {
-                          e.preventDefault();
-                          handleTagClick(tag);
-                        }}
+                        onClick={() => handleTagClick(tag)}
                         className={`px-3 py-1 rounded-full text-sm transition-all duration-300 ${selectedTag === tag
-                          ? 'bg-primary text-white'
-                          : 'bg-white/10 hover:bg-white/20 text-gray-300'
+                            ? 'bg-primary text-white'
+                            : 'bg-white/10 hover:bg-white/20 text-gray-300'
                           }`}
                       >
                         {tag}
@@ -110,8 +101,7 @@ export default function Index({ posts, globalData }) {
                     ))}
                   </div>
                 )}
-                <ArrowIcon className="mt-4 group-hover:text-primary transition-colors duration-300" />
-              </Link>
+              </div>
             </li>
           ))}
         </ul>
